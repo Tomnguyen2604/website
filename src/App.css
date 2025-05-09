@@ -1,42 +1,199 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home_container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home_container h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.home_container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+:root[data-theme="dark"] .home_container h1 {
+    color: var(--dracula-foreground);
+}
+
+:root[data-theme="dark"] .home_container h2 {
+    color: var(--dracula-cyan);
+}
+
+:root[data-theme="dark"] .home_container p {
+    color: var(--dracula-comment);
+}
+
+.home_container p {
+    font-size: 1.2rem;
+    color: #666;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
 }
 
 .card {
-  padding: 2em;
+    padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+    color: #888;
+}
+
+/* Experience Section */
+.experience-container {
+    width: 100%;
+    padding: 2rem;
+}
+
+.section-header h1 {
+    color: var(--dracula-foreground);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.tech-stack li {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: var(--dracula-current-line);
+    color: var(--dracula-foreground);
+    transition: all 0.3s ease;
+}
+
+.tech-stack li:hover {
+    background-color: var(--dracula-selection);
+    transform: translateY(-2px);
+}
+
+/* Projects Section */
+.projects_container {
+    width: 100%;
+    padding: 2rem;
+}
+
+:root[data-theme="dark"] .projects_container h1 {
+    color: var(--dracula-foreground);
+}
+
+:root[data-theme="dark"] .projects_container p {
+    color: var(--dracula-comment);
+}
+
+/* Contact Section */
+.contact_container {
+    width: 100%;
+    padding: 2rem;
+}
+
+:root[data-theme="dark"] .contact_container h1 {
+    color: var(--dracula-foreground);
+}
+
+:root[data-theme="dark"] .contact_container p {
+    color: var(--dracula-comment);
+}
+
+/* Footer */
+#footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--dracula-bg);
+    border-top: 1px solid var(--dracula-current-line);
+}
+
+:root[data-theme="dark"] #footer p {
+    color: var(--dracula-comment);
+}
+
+/* About Section */
+.about_container {
+    width: 100%;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about_text h1 {
+    color: var(--dracula-foreground);
+    margin-bottom: 1.5rem;
+}
+
+.about_text p {
+    color: var(--dracula-comment);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* General Styles */
+:root[data-theme="dark"] {
+    background-color: var(--dracula-bg);
+}
+
+:root[data-theme="dark"] .section_container {
+    background-color: var(--dracula-bg);
+}
+
+:root[data-theme="dark"] .layout {
+    background-color: var(--dracula-bg);
 }

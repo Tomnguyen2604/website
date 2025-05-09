@@ -10,3 +10,5 @@ const Footer = () => {
         </Fade>
     );
 };
+
+export default Footer;
