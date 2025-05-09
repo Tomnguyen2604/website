@@ -9,6 +9,7 @@ const Expericance = () => {
         "Node.js",
         "MySQL",
         "MongoDB",
+        "CSS",
     ];
     return (
         <div className="experience-container">
