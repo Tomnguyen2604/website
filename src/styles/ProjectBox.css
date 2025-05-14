@@ -169,3 +169,29 @@
         padding: 3rem 1rem 1rem 1rem;
     }
 }
+
+.project-modal-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-modal-separator {
+    height: 1px;
+    background-color: var(--dracula-current-line);
+    margin: 0.5rem 0;
+}
+
+.project-modal-languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.language-tag {
+    background-color: var(--dracula-current-line);
+    color: var(--dracula-foreground);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}

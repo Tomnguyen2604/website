@@ -5,7 +5,8 @@ import "../styles/ProjectBox.css";
 
 const projects = [
     {
-        title: "conversy",
+        title: "coversy",
+        image: "./src/assets/coversy.png",
         description:
             "Final project for the course of Software Development at SAIT",
         links: [
@@ -14,6 +15,7 @@ const projects = [
                 url: "https://github.com/drewxs/coversy",
             },
         ],
+        libraries: ["React", "SASS", "Redux", "Express", "MongoDB", "AWS S3"],
     },
 ];
 
@@ -34,8 +36,10 @@ const Projects = () => {
                     <ProjectBox
                         key={idx}
                         title={project.title}
+                        image={project.image}
                         description={project.description}
                         links={project.links}
+                        libraries={project.libraries}
                     />
                 ))}
             </div>

@@ -1,12 +1,16 @@
 import "../styles/Navbar.css";
 import { Fade } from "react-awesome-reveal";
-import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <Fade triggerOnce>
             <div className="navbar">
@@ -16,7 +20,9 @@ const Navbar = () => {
                             <h1>HN</h1>
                         </NavLink>
                     </div>
-                    <div className="navbar_items">
+                    <div
+                        className={`navbar_items ${isMenuOpen ? "active" : ""}`}
+                    >
                         <ul>
                             <li>
                                 <NavLink
@@ -24,6 +30,7 @@ const Navbar = () => {
                                     className={({ isActive }) =>
                                         isActive ? "active-link" : ""
                                     }
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     Home
                                 </NavLink>
@@ -34,6 +41,7 @@ const Navbar = () => {
                                     className={({ isActive }) =>
                                         isActive ? "active-link" : ""
                                     }
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     About
                                 </NavLink>
@@ -44,6 +52,7 @@ const Navbar = () => {
                                     className={({ isActive }) =>
                                         isActive ? "active-link" : ""
                                     }
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     Experience
                                 </NavLink>
@@ -54,6 +63,7 @@ const Navbar = () => {
                                     className={({ isActive }) =>
                                         isActive ? "active-link" : ""
                                     }
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     Projects
                                 </NavLink>
@@ -64,16 +74,27 @@ const Navbar = () => {
                                     className={({ isActive }) =>
                                         isActive ? "active-link" : ""
                                     }
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     Contact
                                 </NavLink>
                             </li>
                         </ul>
                     </div>
+                    <button
+                        className="mobile-menu-button"
+                        onClick={toggleMenu}
+                        aria-label="Toggle menu"
+                    >
+                        <span
+                            className={`menu-icon ${isMenuOpen ? "open" : ""}`}
+                        ></span>
+                    </button>
                     <ThemeToggle />
                 </div>
             </div>
         </Fade>
     );
 };
+
 export default Navbar;

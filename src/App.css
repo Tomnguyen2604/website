@@ -43,7 +43,7 @@
 
 .home_container p {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--dracula-foreground) !important;
 }
 
 .logo {
@@ -80,50 +80,6 @@
 
 .read-the-docs {
     color: #888;
-}
-
-/* Experience Section */
-.experience-container {
-    width: 100%;
-    padding: 2rem;
-}
-
-.section-header h1 {
-    color: var(--dracula-foreground);
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    justify-content: center;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-}
-
-.tech-stack li {
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    background-color: var(--dracula-current-line);
-    color: var(--dracula-foreground);
-    transition: all 0.3s ease;
-}
-
-.tech-stack li:hover {
-    background-color: var(--dracula-selection);
-    transform: translateY(-2px);
 }
 
 /* Projects Section */
@@ -196,4 +152,115 @@
 
 :root[data-theme="dark"] .layout {
     background-color: var(--dracula-bg);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .main-content {
+        padding: 80px 2rem 2rem 2rem;
+    }
+
+    .home_container h1 {
+        font-size: 3rem;
+    }
+
+    .home_container h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .home_container h1 {
+        font-size: 2.5rem;
+    }
+
+    .home_container h2 {
+        font-size: 1.5rem;
+    }
+
+    .about_container {
+        padding: 1.5rem;
+    }
+
+    .about_text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 80px 1rem 1rem 1rem;
+    }
+
+    .home_container h1 {
+        font-size: 2rem;
+    }
+
+    .home_container h2 {
+        font-size: 1.3rem;
+    }
+
+    .home_container p {
+        font-size: 1rem;
+    }
+
+    .about_container {
+        padding: 1rem;
+    }
+
+    .projects_container,
+    .experience-container,
+    .contact_container {
+        padding: 1rem;
+    }
+
+    .tech-stack {
+        gap: 0.5rem;
+    }
+
+    .tech-stack li {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .home_container h1 {
+        font-size: 1.8rem;
+    }
+
+    .home_container h2 {
+        font-size: 1.2rem;
+    }
+
+    .home_container p {
+        font-size: 0.9rem;
+    }
+
+    .about_text h1 {
+        font-size: 1.8rem;
+    }
+
+    .about_text p {
+        font-size: 0.9rem;
+    }
+
+    .tech-stack li {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure text remains readable on small screens */
+p,
+li,
+a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }

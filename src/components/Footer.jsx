@@ -5,7 +5,6 @@ const Footer = () => {
         <Fade>
             <div id="footer">
                 <p>Build by Hoa Nguyen</p>
-                <p>All right reserve</p>
             </div>
         </Fade>
     );
