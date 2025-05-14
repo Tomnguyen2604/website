@@ -15,7 +15,7 @@ const Expericance = () => {
         <div className="experience-container">
             <Fade triggerOnce duration={2000}>
                 <div className="section-header">
-                    <h1>/experience</h1>
+                    <h1>Experience</h1>
                 </div>
             </Fade>
             <div className="skills-container">
