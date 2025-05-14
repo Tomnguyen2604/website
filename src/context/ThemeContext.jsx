@@ -3,27 +3,23 @@ import { createContext, useState, useContext, useEffect } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const [isDarkMode, setIsDarkMode] = useState(() => {
-        const savedTheme = localStorage.getItem("theme");
-        return savedTheme ? savedTheme === "dark" : true;
-    });
-
+    // Always default to dark mode, remove state and localStorage logic
     useEffect(() => {
-        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
         document.documentElement.setAttribute(
             "data-theme",
-            isDarkMode ? "dark" : "light"
+            "dark" // Always dark
         );
-    }, [isDarkMode]);
+    }, []); // Run only once on mount
 
-    const toggleTheme = () => {
-        setIsDarkMode(!isDarkMode);
+    // Provide a no-op toggleTheme and always true isDarkMode for compatibility if consumed elsewhere,
+    // though ideally consumers would be updated not to need these.
+    const value = {
+        isDarkMode: true,
+        toggleTheme: () => {}, // No operation
     };
 
     return (
-        <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
-            {children}
-        </ThemeContext.Provider>
+        <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
     );
 };
 

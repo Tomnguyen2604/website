@@ -6,9 +6,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
 
-:root[data-theme="dark"] {
     color-scheme: dark;
     --dracula-bg: #282a36;
     --dracula-current-line: #44475a;
@@ -27,12 +25,6 @@
     background-color: var(--dracula-bg);
 }
 
-:root[data-theme="light"] {
-    color-scheme: light;
-    color: #213547;
-    background-color: #ffffff;
-}
-
 a {
     font-weight: 500;
     color: var(--dracula-purple);
@@ -48,9 +40,6 @@ body {
     min-width: 320px;
     min-height: 100vh;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-:root[data-theme="dark"] body {
     background-color: var(--dracula-bg);
     color: var(--dracula-foreground);
 }
@@ -77,17 +66,14 @@ body {
 h1 {
     font-size: 3.2em;
     line-height: 1.1;
-}
-
-:root[data-theme="dark"] h1 {
     color: var(--dracula-foreground);
 }
 
-:root[data-theme="dark"] h2 {
+h2 {
     color: var(--dracula-cyan);
 }
 
-:root[data-theme="dark"] p {
+p {
     color: var(--dracula-comment);
 }
 
@@ -100,15 +86,8 @@ button {
     font-family: inherit;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-:root[data-theme="dark"] button {
     background-color: var(--dracula-current-line);
     color: var(--dracula-foreground);
-}
-
-:root[data-theme="light"] button {
-    background-color: #f9f9f9;
 }
 
 button:hover {
@@ -141,23 +120,23 @@ button:focus-visible {
     background-color: var(--dracula-selection);
 }
 
-:root[data-theme="dark"] .navbar {
+.navbar {
     background-color: var(--dracula-bg);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-:root[data-theme="dark"] .navbar_items li a {
+.navbar_items li a {
     color: var(--dracula-foreground);
 }
 
-:root[data-theme="dark"] .navbar_items li a:hover {
+.navbar_items li a:hover {
     color: var(--dracula-pink);
 }
 
-:root[data-theme="dark"] .active-link {
+.active-link {
     color: var(--dracula-green) !important;
 }
 
-:root[data-theme="dark"] .navbar_logo h1 {
+.navbar_logo h1 {
     color: var(--dracula-purple);
 }

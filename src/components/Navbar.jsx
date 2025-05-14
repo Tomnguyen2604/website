@@ -2,7 +2,6 @@ import "../styles/Navbar.css";
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -90,7 +89,6 @@ const Navbar = () => {
                             className={`menu-icon ${isMenuOpen ? "open" : ""}`}
                         ></span>
                     </button>
-                    <ThemeToggle />
                 </div>
             </div>
         </Fade>
