@@ -2,11 +2,13 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 import ProjectBox from "./ProjectBox";
 import "../styles/ProjectBox.css";
+import frostlineImg from "../assets/1.png";
+import coversyImg from "../assets/coversy.png";
 
 const projects = [
     {
         title: "coversy",
-        image: "./src/assets/coversy.png",
+        image: coversyImg,
         description:
             "Final project for the course of Software Development at SAIT",
         links: [
@@ -19,7 +21,7 @@ const projects = [
     },
     {
         title: "Frostline App",
-        image: "./src/assets/1.png",
+        image: frostlineImg,
         description:
             "A mobile app for digital storefront at Frostline Solution LLC",
         links: [
