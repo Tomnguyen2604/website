@@ -13,6 +13,9 @@ const tech_stack = [
     { name: "SASS", exp: 3 },
     { name: "Redux", exp: 3 },
     { name: "AWS S3", exp: 1 },
+    { name: "Flutter", exp: 2 },
+    { name: "Dart", exp: 2 },
+    { name: "Xcode", exp: 3 },
 ];
 
 const Expericance = () => {

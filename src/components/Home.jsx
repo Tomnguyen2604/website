@@ -2,10 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 
-const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
-const CLIENT_SECRET = import.meta.env.VITE_CLIENT_SECRET;
-const REFRESH_TOKEN = import.meta.env.VITE_REFRESH_TOKEN;
-
 const Home = () => {
     const [screen, setScreen] = useState(window.innerWidth);
 
