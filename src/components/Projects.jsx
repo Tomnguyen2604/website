@@ -17,6 +17,19 @@ const projects = [
         ],
         libraries: ["React", "SASS", "Redux", "Express", "MongoDB", "AWS S3"],
     },
+    {
+        title: "Frostline App",
+        image: "./src/assets/1.png",
+        description:
+            "A mobile app for digital storefront at Frostline Solution LLC",
+        links: [
+            {
+                label: "TestFlight",
+                url: "https://testflight.apple.com/join/BFBXV3hz",
+            },
+        ],
+        libraries: ["Dart", "Flutter", "Xcode"],
+    },
 ];
 
 const Projects = () => {
