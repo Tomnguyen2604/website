@@ -1,15 +1,12 @@
-import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
-const Layout = () => {
+const Layout = ({ children }) => {
     return (
         <div className="layout">
             <Navbar />
             <main className="main-content">
-                <Outlet />
+                {children}
             </main>
-            <Footer />
         </div>
     );
 };

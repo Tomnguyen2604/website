@@ -1,15 +1,174 @@
 import "./App.css";
-import Home from "./components/Home";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
+import { useState } from "react";
+import ProjectModal from "./components/ProjectModal";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 function App() {
+    const [selectedProject, setSelectedProject] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Project data with detailed information
+    const projects = [
+        {
+            id: 1,
+            title: "Banking Application",
+            description: "Full-stack banking solution with modern UI",
+            fullDescription: "A comprehensive banking application built with modern web technologies. Features include user authentication, account management, transaction history, fund transfers, and real-time balance updates. The application includes a responsive design optimized for both desktop and mobile devices with a focus on security and user experience.",
+            image: "https://via.placeholder.com/800x400/1a1a1a/ffffff?text=Banking+App",
+            technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "CSS3"],
+            links: {
+                live: "https://your-banking-app.com",
+                github: "https://github.com/yourusername/banking-app"
+            }
+        },
+        {
+            id: 2,
+            title: "E-commerce Platform",
+            description: "Complete shopping experience with payment integration",
+            fullDescription: "A full-featured e-commerce platform with product catalog, shopping cart, user authentication, payment processing, and order management. Built with React and Node.js, featuring a clean, modern design with smooth animations and optimized performance. Includes admin panel for inventory management and analytics dashboard.",
+            image: "https://via.placeholder.com/800x400/1a1a1a/ffffff?text=E-commerce+Platform",
+            technologies: ["React", "Express", "PostgreSQL", "Stripe", "Redux", "Tailwind CSS"],
+            links: {
+                live: "https://your-ecommerce.com",
+                github: "https://github.com/yourusername/ecommerce-platform"
+            }
+        },
+        {
+            id: 3,
+            title: "Portfolio Website",
+            description: "Minimalist portfolio showcasing development work",
+            fullDescription: "A clean, minimalist portfolio website built with React and modern CSS. Features smooth scroll animations, dark mode design, responsive layout, and optimized performance. Showcases projects with detailed modals, contact integration, and professional presentation of skills and experience.",
+            image: "https://via.placeholder.com/800x400/1a1a1a/ffffff?text=Portfolio+Website",
+            technologies: ["React", "CSS3", "Vite", "React Awesome Reveal"],
+            links: {
+                live: "https://your-portfolio.com",
+                github: "https://github.com/yourusername/portfolio"
+            }
+        }
+    ];
+
+    const openModal = (project) => {
+        setSelectedProject(project);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setSelectedProject(null);
+        setIsModalOpen(false);
+    };
     return (
         <div className="app">
-            <Fade triggerOnce>
-                <div className="section_container">
-                    <Home />
+            {/* Particles Background */}
+            <ParticlesBackground />
+            
+            {/* Hero Section */}
+            <section className="hero-section">
+                <div className="hero-content">
+                    <Fade direction="up" triggerOnce duration={1000}>
+                        <div className="hero-text">
+                            <h1>Hoa Nguyen</h1>
+                            <p className="hero-subtitle">Full Stack Developer</p>
+                            <p className="hero-description">
+                                Passionate about creating digital experiences that combine 
+                                clean design with powerful functionality.
+                            </p>
+                        </div>
+                    </Fade>
                 </div>
-            </Fade>
+            </section>
+
+            {/* About Section */}
+            <section className="about-section">
+                <div className="container">
+                    <div className="section-grid">
+                        <Fade direction="left" triggerOnce duration={800} delay={200}>
+                            <div className="grid-item">
+                                <h2>About</h2>
+                                <p>
+                                    I'm a software developer with a passion for creating 
+                                    meaningful digital experiences. I specialize in modern 
+                                    web technologies and love solving complex problems 
+                                    with elegant solutions.
+                                </p>
+                            </div>
+                        </Fade>
+                        <Fade direction="right" triggerOnce duration={800} delay={400}>
+                            <div className="grid-item">
+                                <h3>Skills</h3>
+                                <div className="skills-list">
+                                    <span>React</span>
+                                    <span>JavaScript</span>
+                                    <span>TypeScript</span>
+                                    <span>Node.js</span>
+                                    <span>Python</span>
+                                    <span>CSS</span>
+                                </div>
+                            </div>
+                        </Fade>
+                    </div>
+                </div>
+            </section>
+
+            {/* Projects Section */}
+            <section className="projects-section">
+                <div className="container">
+                    <Fade direction="up" triggerOnce duration={800}>
+                        <h2>Selected Projects</h2>
+                    </Fade>
+                    <div className="projects-grid">
+                        {projects.map((project, index) => (
+                            <Fade key={project.id} direction="up" triggerOnce duration={600} delay={100 * (index + 1)}>
+                                <div 
+                                    className="project-card clickable" 
+                                    onClick={() => openModal(project)}
+                                >
+                                    <div className="project-number">
+                                        {String(index + 1).padStart(2, '0')}
+                                    </div>
+                                    <h3>{project.title}</h3>
+                                    <p>{project.description}</p>
+                                    <div className="project-tech">
+                                        {project.technologies.slice(0, 2).map((tech, techIndex) => (
+                                            <span key={techIndex}>{tech}</span>
+                                        ))}
+                                    </div>
+                                    <div className="project-cta">
+                                        <span>Click to view details</span>
+                                    </div>
+                                </div>
+                            </Fade>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Contact Section */}
+            <section className="contact-section">
+                <div className="container">
+                    <Fade direction="up" triggerOnce duration={800}>
+                        <div className="contact-content">
+                            <h2>Let's Work Together</h2>
+                            <p>
+                                I'm always interested in new opportunities and 
+                                challenging projects. Let's create something great.
+                            </p>
+                            <div className="contact-links">
+                                <a href="mailto:hoa@example.com">Email</a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </Fade>
+                </div>
+            </section>
+
+            {/* Project Modal */}
+            <ProjectModal 
+                project={selectedProject}
+                isOpen={isModalOpen}
+                onClose={closeModal}
+            />
         </div>
     );
 }
