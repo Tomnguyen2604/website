@@ -4,6 +4,7 @@ import { useState } from "react";
 import ProjectModal from "./components/ProjectModal";
 import ParticlesBackground from "./components/ParticlesBackground";
 import coversyImage from "./assets/coversy.png";
+import portfolioImage from "./assets/portfolio.png";
 import frostlineImage from "./assets/1.png";
 
 function App() {
@@ -61,7 +62,7 @@ function App() {
             description: "Minimalist portfolio showcasing development work",
             fullDescription:
                 "A clean, minimalist portfolio website built with React and modern CSS. Features smooth scroll animations, dark mode design, responsive layout, and optimized performance. Showcases projects with detailed modals, contact integration, and professional presentation of skills and experience.",
-            image: "https://via.placeholder.com/800x400/1a1a1a/ffffff?text=Portfolio+Website",
+            image: portfolioImage,
             technologies: ["React", "CSS3", "Vite", "React Awesome Reveal"],
             links: {
                 live: "https://website-orpin-two-63.vercel.app/",
