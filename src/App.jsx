@@ -3,6 +3,8 @@ import { Fade, Slide } from "react-awesome-reveal";
 import { useState } from "react";
 import ProjectModal from "./components/ProjectModal";
 import ParticlesBackground from "./components/ParticlesBackground";
+import coversyImage from "./assets/coversy.png";
+import frostlineImage from "./assets/1.png";
 
 function App() {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -17,7 +19,7 @@ function App() {
                 "Full-stack application for instructor shift scheduling, shift exchange, and payroll management system.",
             fullDescription:
                 " Coversy is a comprehensive full-stack application designed to streamline instructor shift scheduling, shift exchanges, and payroll management. Built with React for the frontend and Node.js with Express for the backend, it features a user-friendly interface that allows instructors to easily manage their shifts, request exchanges, and track their earnings. The application uses MongoDB for data storage and JWT for secure authentication. The responsive design ensures a seamless experience across devices.",
-            image: "/src/assets/coversy.png",
+            image: coversyImage,
             technologies: [
                 "React",
                 "Node.js",
@@ -39,7 +41,7 @@ function App() {
                 "An app that help user to get the details of their orders, track details of their orders, and the details of the devices.",
             fullDescription:
                 "Frostline Solution App is a mobile application designed to help users manage their orders and track device details. Built with Flutter, it provides a smooth and intuitive user experience. The app allows users to view their order history, track the status of current orders, and access detailed information about their devices. It features a clean design, easy navigation, and real-time updates on order status. The backend is powered by Python, ensuring robust data management and security.",
-            image: "/src/assets/1.png",
+            image: frostlineImage,
             technologies: [
                 "Flutter",
                 "iOS",
