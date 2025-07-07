@@ -62,8 +62,7 @@ function App() {
             image: "https://via.placeholder.com/800x400/1a1a1a/ffffff?text=Portfolio+Website",
             technologies: ["React", "CSS3", "Vite", "React Awesome Reveal"],
             links: {
-                live: "https://your-portfolio.com",
-                github: "https://github.com/yourusername/portfolio",
+                live: "https://website-orpin-two-63.vercel.app/",
             },
         },
     ];
