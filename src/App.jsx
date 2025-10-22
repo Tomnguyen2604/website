@@ -201,16 +201,16 @@ function App() {
                                 great.
                             </p>
                             <div className="contact-links">
-                                <a href="mailto:hoa@example.com">Email</a>
+                                <a href="mailto:tomnguyen2604@gmail.com">Email</a>
                                 <a
-                                    href="https://linkedin.com"
+                                    href="https://www.linkedin.com/in/giahoanguyen/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     LinkedIn
                                 </a>
                                 <a
-                                    href="https://github.com"
+                                    href="https://github.com/tomnguyen2604"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
