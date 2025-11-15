@@ -6,6 +6,8 @@ import ParticlesBackground from "./components/ParticlesBackground";
 import coversyImage from "./assets/coversy.png";
 import portfolioImage from "./assets/portfolio.png";
 import frostlineImage from "./assets/1.png";
+import odinImage from "./assets/odin.png"; // Add your Odin AI image here
+import heliosImage from "./assets/helios.png"; // Add your Helios image here
 
 function App() {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -58,6 +60,41 @@ function App() {
         },
         {
             id: 3,
+            title: "Odin AI",
+            description:
+                "Intelligent conversational assistant for natural medicine education with local LLM deployment and 100% safety compliance.",
+            fullDescription:
+                "Odin AI is an intelligent conversational assistant designed for natural medicine education, ensuring 100% safety compliance and professional boundaries. Built with Python and leveraging CUDA for performance, it features local LLM deployment for conversational experiences without external APIs. The system achieved 100% success rate across comprehensive natural medicine test suites and includes an intelligent auto-tuning system for optimal response quality. Features robust error handling with topic-specific fallback responses and an extensive testing framework with automated quality assessment. The user experience is focused on engagement and education while maintaining ethical guidelines for health information delivery.",
+            image: odinImage,
+            technologies: ["Python", "JSON", "CUDA", "LLM", "NLP"],
+            links: {
+                github: "https://github.com/Tomnguyen2604/Odin_AI", 
+            },
+        },
+        {
+            id: 4,
+            title: "Helios",
+            description:
+                "Full-stack real-time financial dashboard with AI-powered market insights using fine-tuned GPT-2 model.",
+            fullDescription:
+                "Helios is a comprehensive full-stack real-time financial dashboard featuring a React frontend and FastAPI backend. The application provides live stock tracking with 3-second auto-refresh and interactive Chart.js visualizations for multi-stock trend analysis. It features a fine-tuned GPT-2 model trained on financial datasets using Hugging Face Transformers and PyTorch, implementing a context-aware AI chat assistant with optimized generation parameters for intelligent market insights. The system integrates yfinance API for real-time market data retrieval, custom React hooks for efficient state management, and a responsive UI with SCSS featuring dark theme, gradient effects, and smooth animations. Includes a smart alert system with categorized notifications, professional modal interfaces for stock selection with search functionality, and optimized performance through lazy loading and debounced operations. Architected with component-based structure, separation of concerns, comprehensive error handling, and CORS-enabled REST API endpoints.",
+            image: heliosImage,
+            technologies: [
+                "React",
+                "Vite",
+                "SCSS",
+                "Chart.js",
+                "FastAPI",
+                "PyTorch",
+                "GPT-2",
+                "yFinance",
+            ],
+            links: {
+                github: "https://github.com/Tomnguyen2604/helios-app",
+            },
+        },
+        {
+            id: 5,
             title: "Portfolio Website",
             description: "Minimalist portfolio showcasing development work",
             fullDescription:
