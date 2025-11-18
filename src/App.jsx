@@ -6,8 +6,9 @@ import ParticlesBackground from "./components/ParticlesBackground";
 import coversyImage from "./assets/coversy.png";
 import portfolioImage from "./assets/portfolio.png";
 import frostlineImage from "./assets/1.png";
-import odinImage from "./assets/odin.png"; // Add your Odin AI image here
-import heliosImage from "./assets/helios.png"; // Add your Helios image here
+import odinImage from "./assets/odin.png";
+import heliosImage from "./assets/helios.png"; 
+
 
 function App() {
     const [selectedProject, setSelectedProject] = useState(null);
