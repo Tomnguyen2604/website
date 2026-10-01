@@ -7,7 +7,8 @@ import coversyImage from "./assets/coversy.png";
 import portfolioImage from "./assets/portfolio.png";
 import frostlineImage from "./assets/1.png";
 import odinImage from "./assets/odin.png";
-import heliosImage from "./assets/helios.png"; 
+import heliosImage from "./assets/helios.png";
+import tapinImage from "./assets/tapin.webp";
 
 
 function App() {
@@ -16,6 +17,33 @@ function App() {
 
     // Project data with detailed information
     const projects = [
+        {
+            id: 6,
+            title: "TapIn",
+            description:
+                "Founder & sole full-stack engineer. All-in-one salon operations platform for nail salons: online booking, kiosk check-in, staff scheduling, payroll, and AI front-desk workflows.",
+            fullDescription:
+                "Role: Founder, lead engineer, and sole full-stack engineer. I designed, built, and shipped TapIn end to end in five months (April–September 2026): about 2,400 commits, ~100 API route groups, 1,500+ automated test files, and apps for web, iOS, Android, and desktop. TapIn is a salon operations platform built for nail salons, live in production at tapinus.com with its first salon customer. The hardest problem was designing the workflow for the AI phone receptionist: an inbound call is answered through Twilio, the caller's speech is transcribed and passed to an OpenAI model with that salon's services, hours, and technicians, and the model's reply is either spoken back through a text-to-speech voice or turned into a real booking scoped to the right location. The tricky part was everything around the happy path: falling back to a holding line when the model returns nothing, transferring to a human when the AI can't help or a caller becomes abusive, texting missed callers automatically, and auditing each salon's setup so owners can see where the AI is likely to guess before a customer ever hears it. It covers the full front-of-house and back-office workflow: public online booking by location, kiosk check-in and walk-in waitlists, staff scheduling with time-off and availability checks, smart rescheduling, client profiles, loyalty, SMS/email reminders, reviews, payroll, and reporting. AI front-desk workflows help salons handle routine client interactions. The web app is built with Next.js 16, React, TypeScript, and Tailwind, backed by PostgreSQL via Drizzle ORM, with BullMQ and Redis for background jobs, Twilio and Resend for messaging, and Sentry for monitoring. It is multi-tenant with organization-scoped data, and ships alongside native iOS and Android apps and an Electron desktop app. Quality is enforced with Vitest unit tests and Playwright end-to-end tests.",
+            image: tapinImage,
+            technologies: [
+                "Next.js",
+                "TypeScript",
+                "React",
+                "Tailwind CSS",
+                "PostgreSQL",
+                "Drizzle ORM",
+                "BullMQ",
+                "Redis",
+                "Twilio",
+                "OpenAI",
+                "iOS",
+                "Android",
+                "Electron",
+            ],
+            links: {
+                live: "https://www.tapinus.com",
+            },
+        },
         {
             id: 1,
             title: "Coversy",
